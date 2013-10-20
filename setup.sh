@@ -13,20 +13,16 @@ echo -e '\n\n================'
 echo -e '## Linking files\n'
 for file in `ls -A -I README.md -I setup.sh -I .git -I .gitmodules`;
 do
-    echo $PWD/$file
+    echo -n $PWD/$file
 
     if [ $PWD/$file == `readlink -f $HOME/$file` ]; then
-        echo "skipping..."
+        echo " .......skipping"
         continue
-    elif [ -e $HOME/$file ]; then
-        echo "backuping..."
-        mv $HOME/$file $HOME/$file-backup-`date +%Y%m%d%H%M%S`
-        echo "replacing..."
     else
-        echo "linking..."
+        echo " .......linking"
     fi
 
-    ln -sf $PWD/$file $HOME
+    ln -sb --suffix='-backup' $PWD/$file $HOME
 done
 
 echo -e '\n\n======================================'
