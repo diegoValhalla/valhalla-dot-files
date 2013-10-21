@@ -119,17 +119,5 @@ if [ -x /usr/lib/command-not-found ]; then
     }
 fi
 
-if [ "$PS1" ] ; then
-   mkdir -p -m 0700 /dev/cgroup/cpu/user/$$ > /dev/null 2>&1
-   echo $$ > /dev/cgroup/cpu/user/$$/tasks
-   echo "1" > /dev/cgroup/cpu/user/$$/notify_on_release
-fi
-
-# to launch yEd from terminal
-export PATH=$PATH:/home/diego/yEd/
-
-# to launch Eclipse from terminal
-export PATH=$PATH:/home/diego/Documents/Programacao/IDEs/eclipse/
-
 # to show fortune cookies
-cowsay -f $(ls /usr/share/cowsay/cows/ | shuf -n1) $(fortune)
+cowsay -f $(ls /usr/share/cowsay/cows/ | shuf -n2) $(fortune)

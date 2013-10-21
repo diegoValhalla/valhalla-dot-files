@@ -3,7 +3,7 @@
 echo '================================'
 echo -e '## Installing necessary packages\n'
 sudo apt-get install vim tmux git exuberant-ctags\
-                     build-essential cmake python-dev
+                     build-essential cmake python-dev cowsay fortune
 
 echo -e '\n\n================================'
 echo -e '## Downloading NeoBundle for Vim\n'
