@@ -1,0 +1,6 @@
+[alias]
+    log1 = log --pretty=oneline --abbrev-commit
+[color]
+    ui = true
+[core]
+    editor = vim
