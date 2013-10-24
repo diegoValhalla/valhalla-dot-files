@@ -8,6 +8,7 @@ sudo apt-get install vim tmux git exuberant-ctags\
 echo -e '\n\n================================'
 echo -e '## Downloading NeoBundle for Vim\n'
 git submodule update --init
+git submodule foreach 'git checkout master'
 
 echo -e '\n\n================'
 echo -e '## Linking files\n'
