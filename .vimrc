@@ -12,36 +12,25 @@ if has("syntax")
     syntax on
 endif
 
-" Uncomment the following to have Vim jump to the last position when
-" reopening a file
+" To Vim jump to the last position when reopening a file
 if has("autocmd")
   au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
-endif
-
-" To have Vim load indentation rules and plugins according to the detected
-" filetype.
-"if has("autocmd")
-  filetype plugin indent on
-"endif
-
-" Source a global configuration file if available
-if filereadable("/etc/vim/vimrc.local")
-  source /etc/vim/vimrc.local
 endif
 
 
 "Plugins {
 
     "Run VIM scripts from isolated directories by adding them to VIM's
-     if has('vim_starting')
-       set runtimepath+=~/.vim/bundle/neobundle.vim/
-     endif
+    if has('vim_starting')
+        set nocompatible  " Set VIM to be no compatible with VI
+        set runtimepath+=~/.vim/bundle/neobundle.vim/
+    endif
 
-     call neobundle#rc(expand('~/.vim/bundle/'))
-     let g:neobundle#install_process_timeout=600
+    call neobundle#rc(expand('~/.vim/bundle/'))
+    let g:neobundle#install_process_timeout=600
 
-     " Let NeoBundle manage NeoBundle
-     NeoBundleFetch 'Shougo/neobundle.vim'
+    " Let NeoBundle manage NeoBundle
+    NeoBundleFetch 'Shougo/neobundle.vim'
 
 
     "Powerline {
@@ -142,7 +131,11 @@ endif
                     \ }
     "}
 
+
+    " To have Vim load indentation rules and plugins according to the detected
+    " filetype.
     filetype plugin indent on
+
     NeoBundleCheck
 " }
 
@@ -176,7 +169,6 @@ endif
 
 " Settings {
 
-    set nocompatible        " Set VIM to be no compatible with VI
     set encoding=utf8       " Set utf8 as standard encoding and en_US as the
                             " standard language
 
