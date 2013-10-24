@@ -1,6 +1,10 @@
 Valhalla dot-files
 ==================
 
+**NOTE**: This dot files only supports Vim 7.3.584 or earlier. In
+[Valloric/YouCompleteMe][] you can find more details about installing a new
+version.
+
 This is my collection of dot files. It includes some configuration files for
 tmux and also for vim. It is strongly based on [magic-dot-files][] and
 [vim-valloric-colorscheme][] for color scheme.
@@ -40,6 +44,7 @@ I also set my color scheme for vim. You can find it at vim/colors/valhalla.vim.
 
 <!-- Reference -->
 
+[Valloric/YouCompleteMe]: https://github.com/Valloric/YouCompleteMe/wiki/Building-Vim-from-source
 [magic-dot-files]: https://github.com/magic-dot-files/magic-dot-files
 [vim-valloric-colorscheme]: https://github.com/Valloric/vim-valloric-colorscheme
 [NeoBundle]: https://github.com/Shougo/neobundle.vim
