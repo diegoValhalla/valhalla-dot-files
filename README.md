@@ -27,7 +27,9 @@ I used [NeoBundle][] for manage my plugins, which are:
 * [MatchTagAlways][]
 
 If your powerline shows some weird characters, it's better to follow
-[Powerline][] explanation how to set a font for it.
+[Powerline][] explanation how to set a font for it. However, this dot files
+will install _DejaVu Sans Mono_ font for it, then it has just to be set in
+terminal profile preferences.
 
 I also set my color scheme for vim. You can find it at vim/colors/valhalla.vim.
 

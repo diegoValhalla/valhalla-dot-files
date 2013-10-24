@@ -35,3 +35,9 @@ echo -e '\n\n==========================='
 echo -e '## Installing YouCompleteMe\n'
 cd $HOME/.vim/bundle/plugins/programming/YouCompleteMe/
 ./install.sh --clang-completer
+
+# install DejaVu Sans Mono font for Powerline
+echo -e '\n\n==========================='
+echo -e '## Installing DejaVu Sans Mono font for Powerline\n'
+cd $HOME/.fonts/
+fc-cache -fv
