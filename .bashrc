@@ -34,39 +34,39 @@ match_lhs=""
 
 
 if ${use_color} ; then
-        # Enable colors for ls, etc.  Prefer ~/.dir_colors #64489
-        if type -P dircolors >/dev/null ; then
-                if [[ -f ~/.dir_colors ]] ; then
-                        eval $(dircolors -b ~/.dir_colors)
-                elif [[ -f /etc/DIR_COLORS ]] ; then
-                        eval $(dircolors -b /etc/DIR_COLORS)
-                fi
+    # Enable colors for ls, etc.  Prefer ~/.dir_colors #64489
+    if type -P dircolors >/dev/null ; then
+        if [[ -f ~/.dir_colors ]] ; then
+            eval $(dircolors -b ~/.dir_colors)
+        elif [[ -f /etc/DIR_COLORS ]] ; then
+            eval $(dircolors -b /etc/DIR_COLORS)
         fi
+    fi
 
-        # The PS1 was changed to show in prompt git branch name in user or root
-        if [[ ${EUID} == 0 ]] ; then
-            PS1='\[\033[0;37m\]\342\224\214${debian_chroot:+[$debian_chroot]}\342\224\200[$(
-                if [[ ${EUID} == 0 ]];
-                    then echo "\[\033[0;31m\]\h";
-                    else echo "\[\033[01;32m\]\u@\h";
-                fi)\[\033[0;37m\]]\342\224\200[\[\033[01;34m\]\w\[\033[0;37m\]]\n\[\033[0;37m\]\342\224\224\342\225\274\[\033[01;30m\]$(
-                __git_ps1 " [%s]") \[\033[01;34m\]\$ \[\033[0m\]'
-        else
-            PS1='\[\033[0;37m\]\342\224\214${debian_chroot:+[$debian_chroot]}\342\224\200[$(
-                if [[ ${EUID} == 0 ]];
-                    then echo "\[\033[0;31m\]\h";
-                    else echo "\[\033[01;32m\]\u@\h";
-                fi)\[\033[0;37m\]]\342\224\200[\[\033[01;34m\]\w\[\033[0;37m\]]\n\[\033[0;37m\]\342\224\224\342\225\274\[\033[01;30m\]$(
-                __git_ps1 " [%s]") \[\033[01;34m\]\$ \[\033[0m\]'
-        fi
+    # The PS1 was changed to show in prompt git branch name in user or root
+    if [[ ${EUID} == 0 ]] ; then
+        PS1='\[\033[0;37m\]\342\224\214${debian_chroot:+[$debian_chroot]}\342\224\200[$(
+            if [[ ${EUID} == 0 ]];
+                then echo "\[\033[0;31m\]\h";
+                else echo "\[\033[01;32m\]\u@\h";
+            fi)\[\033[0;37m\]]\342\224\200[\[\033[01;34m\]\w\[\033[0;37m\]]\n\[\033[0;37m\]\342\224\224\342\225\274\[\033[01;30m\]$(
+            __git_ps1 " [%s]") \[\033[01;34m\]\$ \[\033[0m\]'
+    else
+        PS1='\[\033[0;37m\]\342\224\214${debian_chroot:+[$debian_chroot]}\342\224\200[$(
+            if [[ ${EUID} == 0 ]];
+                then echo "\[\033[0;31m\]\h";
+                else echo "\[\033[01;32m\]\u@\h";
+            fi)\[\033[0;37m\]]\342\224\200[\[\033[01;34m\]\w\[\033[0;37m\]]\n\[\033[0;37m\]\342\224\224\342\225\274\[\033[01;30m\]$(
+            __git_ps1 " [%s]") \[\033[01;34m\]\$ \[\033[0m\]'
+    fi
 
 else
-        if [[ ${EUID} == 0 ]] ; then
-                # show root@ when we don't have colors
-                PS1='\u@\h \W \$ '
-        else
-                PS1='\u@\h \w \$ '
-        fi
+    if [[ ${EUID} == 0 ]] ; then
+            # show root@ when we don't have colors
+            PS1='\u@\h \W \$ '
+    else
+            PS1='\u@\h \w \$ '
+    fi
 fi
 
 # Try to keep environment pollution down, EPA loves us.
