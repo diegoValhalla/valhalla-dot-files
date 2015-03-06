@@ -1,4 +1,4 @@
-alias ls='ls -X --color=auto'
-alias ll='ls -lhX --color=auto'
-alias la='ls -lhXa --color=auto'
+alias ls='ls -v --color=auto'
+alias ll='ls -lhv --color=auto'
+alias la='ls -lhva --color=auto'
 alias grep='grep --colour=auto'
