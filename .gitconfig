@@ -1,6 +1,15 @@
-[alias]
-    log1 = log --pretty=oneline --abbrev-commit
-[color]
-    ui = true
 [core]
     editor = vim
+
+[color]
+    ui = true
+
+[color "status"]
+    added = bold green
+    changed = bold cyan
+
+[alias]
+    logst = log --stat
+    log1 = log --pretty=oneline --abbrev-commit
+    rlog = log --pretty=format:\"%C(yellow)%h%Creset %Cblue%cn%Creset %s\"
+    graph = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(yellow)%an%C(reset) %C(white)%s%C(reset) %C(green)(%ar)%C(reset) %C(bold yellow)%d%C(reset)' --all
