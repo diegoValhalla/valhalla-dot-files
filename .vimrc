@@ -88,7 +88,9 @@ endif
                     \ 'directory' : 'tagbar/'
                     \ }
 
-        set tags=./tags;/,~/.vimtags
+        "search starts in the directory of the current file and goes to its
+        "parent
+        set tags=./tags
         nmap <F8> :TagbarToggle<CR>
     "}
 
@@ -129,6 +131,12 @@ endif
                     \ 'base' : '~/.vim/bundle/plugins/programming/',
                     \ 'directory' : 'MatchTagAlways/'
                     \ }
+    "}
+
+
+    "Ctags {
+        "To run ctags in background
+        nmap <C-l> :call system('ctags --tag-relative --recurse --sort=yes --fields=+l --exclude=".git" . &')<CR><CR>
     "}
 
 
@@ -218,7 +226,7 @@ endif
     autocmd InsertLeave * match ExtraWhitespace /\s\+$/         " show white spaces in the end of line
     autocmd BufWinLeave * call clearmatches()                   " clear buffer
 
-    " Set the working directory the same as the file is being edited.
+    " Set the working directory the same as the file that is being edited.
     autocmd BufEnter * silent! lcd %:p:h
 
     " setting text width for git commits
