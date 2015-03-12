@@ -253,11 +253,5 @@ endif
     vnoremap <S-Tab> <gv
     nnoremap <Tab> <C-w>w       " Switch between splits and vertical splits in normal mode
 
-    " Easier split navigation
-    nnoremap <C-J> <C-W><C-J>
-    nnoremap <C-K> <C-W><C-K>
-    nnoremap <C-L> <C-W><C-L>
-    nnoremap <C-H> <C-W><C-H>
-
     " To automaticly show which tag must be closed
     imap <C-Space> <C-X><C-O>
