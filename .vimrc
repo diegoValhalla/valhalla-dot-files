@@ -17,19 +17,26 @@ if has("autocmd")
   au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
 
-
 "Plugins {
+
+    " NeoBundle settings
+    if !1 | finish | endif
 
     "Run VIM scripts from isolated directories by adding them to VIM's
     if has('vim_starting')
-        set nocompatible  " Set VIM to be no compatible with VI
+        if &compatible
+        set nocompatible               " Be iMproved
+    endif
+
+        " Required:
         set runtimepath+=~/.vim/bundle/neobundle.vim/
     endif
 
-    call neobundle#rc(expand('~/.vim/bundle/'))
-    let g:neobundle#install_process_timeout=600
+    " Required:
+    call neobundle#begin(expand('~/.vim/bundle/'))
 
     " Let NeoBundle manage NeoBundle
+    " Required:
     NeoBundleFetch 'Shougo/neobundle.vim'
 
 
@@ -140,10 +147,14 @@ endif
     "}
 
 
+    call neobundle#end()
+
     " To have Vim load indentation rules and plugins according to the detected
     " filetype.
     filetype plugin indent on
 
+    " If there are uninstalled bundles found on startup,
+    " this will conveniently prompt you to install them.
     NeoBundleCheck
 " }
 
