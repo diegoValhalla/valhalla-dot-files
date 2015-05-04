@@ -50,3 +50,5 @@ echo -e '\n\n==========================='
 echo -e '## Installing YouCompleteMe\n'
 cd $HOME/.vim/bundle/plugins/programming/YouCompleteMe/
 ./install.sh --clang-completer
+
+source ~/.bashrc
