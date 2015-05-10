@@ -39,121 +39,121 @@ endif
     " Required:
     NeoBundleFetch 'Shougo/neobundle.vim'
 
-
-    "Powerline {
-        " Vim status line
-        set laststatus=2  "show status bar
-        NeoBundle 'Lokaltog/powerline', {
-                    \ 'base' : '~/.vim/bundle/plugins/general/',
-                    \ 'directory' : 'powerline/',
-                    \ 'rtp' : 'powerline/bindings/vim/'
-                    \ }
-
-        " Set term to xterm to display powerline colors
-        if match($TERM, "screen*") != -1 || match($TERM, "xterm*") != -1
-            set term=xterm-256color
-        endif
-    "}
-
-
-    "NerdTree {
-        " It's a directory explorer. Shortcut Ctrl-e.
-        NeoBundle 'scrooloose/nerdtree', {
-                    \ 'base' : '~/.vim/bundle/plugins/general/',
-                    \ 'directory' : 'nerdtree/'
-                    \ }
-        map <C-e> :NERDTreeToggle<CR>:NERDTreeMirror<CR>
-        map <leader>e :NERDTreeFind<CR>
-        nmap <leader>nt :NERDTreeFind<CR>
-
-        let NERDTreeShowBookmarks=1
-        let NERDTreeIgnore=['\.pyc', '\~$', '\.swo$', '\.swp$', '\.git', '\.hg', '\.svn', '\.bzr', '\.bak', '\.o', '\.e', '\.obj']
-        let NERDTreeChDirMode=0
-        let NERDTreeQuitOnOpen=1
-        let NERDTreeShowHidden=1
-        let NERDTreeKeepTreeInNewTab=1
-    "}
-
-
-    "NERDCommenter {
-        " Plugin to comment lines.
-        " :help NERDCommenter
-        NeoBundle 'scrooloose/nerdcommenter', {
-                    \ 'base' : '~/.vim/bundle/plugins/programming/',
-                    \ 'directory' : 'nerdcommenter/'
-                    \ }
-    "}
-
-
-    "TagBar {
-        "It provides a sidebar with the information of class and methods in
-        "the file.
-        " - To use it, it's need to install the package: exuberante-ctags
-        " - Shortcut defined F8.
-        NeoBundle 'majutsushi/tagbar', {
-                    \ 'base' : '~/.vim/bundle/plugins/programming/',
-                    \ 'directory' : 'tagbar/'
-                    \ }
-
-        "search starts in the directory of the current file and goes to its
-        "parent
-        set tags=./tags
-        nmap <F8> :TagbarToggle<CR>
-    "}
-
-
-    "Syntastic {
-        "It's a syntax C-error checker that display it when the file is saved.
-        NeoBundle 'scrooloose/syntastic', {
-                    \ 'base' : '~/.vim/bundle/plugins/programming/',
-                    \ 'directory' : 'syntastic/'
-                    \ }
-    "}
-
-
-    "YouCompleteMe {
-        "for Vim >= 7.3.584. It also has Jedi as a submodule.
-        NeoBundle 'Valloric/YouCompleteMe', {
-                    \ 'base' : '~/.vim/bundle/plugins/programming/',
-                    \ 'directory' : 'YouCompleteMe/'
-                    \ }
-
-        let g:ycm_min_num_identifier_candidate_chars = 4
-        let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/plugins/programming/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py'
-        let g:ycm_filetype_specific_completion_to_disable = {'javascript': 1}
-
-        " disable preview popup during completion
-        set completeopt-=preview
-
-        nnoremap <leader>y :YcmForceCompileAndDiagnostics<cr>
-        nnoremap <leader>pg :YcmCompleter GoToDefinitionElseDeclaration<CR>
-        nnoremap <leader>pd :YcmCompleter GoToDefinition<CR>
-        nnoremap <leader>pc :YcmCompleter GoToDeclaration<CR>
-    "}
-
-
-    "MatchTagAlways {
-        "highlight open and close tags
-        NeoBundle 'Valloric/MatchTagAlways', {
-                    \ 'base' : '~/.vim/bundle/plugins/programming/',
-                    \ 'directory' : 'MatchTagAlways/'
-                    \ }
-    "}
-
-
-    "Ctags {
-        "To run ctags in background
-        nmap <C-l> :call system('ctags --tag-relative --recurse --sort=yes --fields=+l --exclude=".git" . &')<CR><CR>
-    "}
-
-    "vim-javascript-syntax {
-        "enhanced javascript syntax
-        NeoBundleLazy 'jelera/vim-javascript-syntax', {
-                        \ 'base' : '~/.vim/bundle/plugins/programming/',
-                        \ 'directory' : 'vim-javascript-syntax/',
-                        \ 'autoload': {'filetypes': ['javascript']}
+        "Powerline {
+            " Vim status line
+            set laststatus=2  "show status bar
+            NeoBundle 'Lokaltog/powerline', {
+                        \ 'base' : '~/.vim/bundle/plugins/general/',
+                        \ 'directory' : 'powerline/',
+                        \ 'rtp' : 'powerline/bindings/vim/'
                         \ }
-    "}
+
+            " Set term to xterm to display powerline colors
+            if match($TERM, "screen*") != -1 || match($TERM, "xterm*") != -1
+                set term=xterm-256color
+            endif
+        "}
+
+
+        "NerdTree {
+            " It's a directory explorer. Shortcut Ctrl-e.
+            NeoBundle 'scrooloose/nerdtree', {
+                        \ 'base' : '~/.vim/bundle/plugins/general/',
+                        \ 'directory' : 'nerdtree/'
+                        \ }
+            map <C-e> :NERDTreeToggle<CR>:NERDTreeMirror<CR>
+            map <leader>e :NERDTreeFind<CR>
+            nmap <leader>nt :NERDTreeFind<CR>
+
+            let NERDTreeShowBookmarks=1
+            let NERDTreeIgnore=['\.pyc', '\~$', '\.swo$', '\.swp$', '\.git', '\.hg', '\.svn', '\.bzr', '\.bak', '\.o', '\.e', '\.obj']
+            let NERDTreeChDirMode=0
+            let NERDTreeQuitOnOpen=1
+            let NERDTreeShowHidden=1
+            let NERDTreeKeepTreeInNewTab=1
+        "}
+
+
+        "NERDCommenter {
+            " Plugin to comment lines.
+            " :help NERDCommenter
+            NeoBundle 'scrooloose/nerdcommenter', {
+                        \ 'base' : '~/.vim/bundle/plugins/programming/',
+                        \ 'directory' : 'nerdcommenter/'
+                        \ }
+        "}
+
+
+        "TagBar {
+            "It provides a sidebar with the information of class and methods in
+            "the file.
+            " - To use it, it's need to install the package: exuberante-ctags
+            " - Shortcut defined F8.
+            NeoBundle 'majutsushi/tagbar', {
+                        \ 'base' : '~/.vim/bundle/plugins/programming/',
+                        \ 'directory' : 'tagbar/'
+                        \ }
+
+            "search starts in the directory of the current file and goes to its
+            "parent
+            set tags=./tags
+            nmap <F8> :TagbarToggle<CR>
+        "}
+
+
+        "Syntastic {
+            "It's a syntax C-error checker that display it when the file is saved.
+            NeoBundle 'scrooloose/syntastic', {
+                        \ 'base' : '~/.vim/bundle/plugins/programming/',
+                        \ 'directory' : 'syntastic/'
+                        \ }
+        "}
+
+
+        "YouCompleteMe {
+            "for Vim >= 7.3.584. It also has Jedi as a submodule.
+            NeoBundle 'Valloric/YouCompleteMe', {
+                        \ 'base' : '~/.vim/bundle/plugins/programming/',
+                        \ 'directory' : 'YouCompleteMe/'
+                        \ }
+
+            let g:ycm_min_num_identifier_candidate_chars = 4
+            let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/plugins/programming/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py'
+            let g:ycm_filetype_specific_completion_to_disable = {'javascript': 1}
+
+            " disable preview popup during completion
+            set completeopt-=preview
+
+            nnoremap <leader>y :YcmForceCompileAndDiagnostics<cr>
+            nnoremap <leader>pg :YcmCompleter GoToDefinitionElseDeclaration<CR>
+            nnoremap <leader>pd :YcmCompleter GoToDefinition<CR>
+            nnoremap <leader>pc :YcmCompleter GoToDeclaration<CR>
+        "}
+
+
+        "MatchTagAlways {
+            "highlight open and close tags
+            NeoBundle 'Valloric/MatchTagAlways', {
+                        \ 'base' : '~/.vim/bundle/plugins/programming/',
+                        \ 'directory' : 'MatchTagAlways/'
+                        \ }
+        "}
+
+
+        "vim-javascript-syntax {
+            "enhanced javascript syntax
+            NeoBundleLazy 'jelera/vim-javascript-syntax', {
+                            \ 'base' : '~/.vim/bundle/plugins/programming/',
+                            \ 'directory' : 'vim-javascript-syntax/',
+                            \ 'autoload': {'filetypes': ['javascript']}
+                            \ }
+        "}
+
+
+        "Ctags {
+            "To run ctags in background
+            nmap <C-l> :call system('ctags --tag-relative --recurse --sort=yes --fields=+l --exclude=".git" . &')<CR><CR>
+        "}
 
     call neobundle#end()
 
