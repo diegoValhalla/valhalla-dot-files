@@ -146,6 +146,14 @@ endif
         nmap <C-l> :call system('ctags --tag-relative --recurse --sort=yes --fields=+l --exclude=".git" . &')<CR><CR>
     "}
 
+    "vim-javascript-syntax {
+        "enhanced javascript syntax
+        NeoBundleLazy 'jelera/vim-javascript-syntax', {
+                        \ 'base' : '~/.vim/bundle/plugins/programming/',
+                        \ 'directory' : 'vim-javascript-syntax/',
+                        \ 'autoload': {'filetypes': ['javascript']}
+                        \ }
+    "}
 
     call neobundle#end()
 
