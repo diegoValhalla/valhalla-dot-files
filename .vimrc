@@ -166,6 +166,20 @@ endif
         "}
 
 
+        "tern_for_vim {
+            "better support within editor for javascript
+            "a '.tern-project' should always be created in order to use it in a
+            "js project as in Tern's documentation.
+            NeoBundleLazy 'marijnh/tern_for_vim', {
+                        \ 'base' : '~/.vim/bundle/plugins/programming/',
+                        \ 'directory' : 'tern_for_vim/',
+                        \ 'autoload': {'filetypes': ['javascript']},
+                        \ 'build' : {'unix': 'npm install'}
+                        \ }
+            "to use Tern with YouCompleteMe
+            autocmd FileType javascript setlocal omnifunc=tern#Complete
+        "}
+
         "Ctags {
             "To run ctags in background
             nmap <C-l> :call system('ctags --tag-relative --recurse --sort=yes --fields=+l --exclude=".git" . &')<CR><CR>
