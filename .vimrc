@@ -49,9 +49,9 @@ endif
                         \ }
 
             " Set term to xterm to display powerline colors
-            if match($TERM, "screen*") != -1 || match($TERM, "xterm*") != -1
-                set term=xterm-256color
-            endif
+            "if match($TERM, "screen*") != -1 || match($TERM, "xterm*") != -1
+                "set term=xterm-256color
+            "endif
         "}
 
 
@@ -147,6 +147,22 @@ endif
                             \ 'directory' : 'vim-javascript-syntax/',
                             \ 'autoload': {'filetypes': ['javascript']}
                             \ }
+        "}
+
+
+        "vim-indent-guides {
+            "highlight indentation level
+            "Toggle <leader>ig
+            NeoBundle 'nathanaelkane/vim-indent-guides', {
+                        \ 'base' : '~/.vim/bundle/plugins/general/',
+                        \ 'directory' : 'vim-indent-guides/'
+                        \ }
+
+            let g:indent_guides_guide_size = 1
+            let g:indent_guides_start_level = 1
+            let g:indent_guides_auto_colors = 0
+            autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd ctermbg=236
+            autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=236
         "}
 
 
