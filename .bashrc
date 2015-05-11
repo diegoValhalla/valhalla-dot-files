@@ -15,9 +15,6 @@ if [ -z "$debian_chroot" ] && [ -r /etc/debian_chroot ]; then
     debian_chroot=$(cat /etc/debian_chroot)
 fi
 
-# set terminal font for tmux
-TERM=xterm-256color
-
 # Set colorful PS1 only on colorful terminals.
 # dircolors --print-database uses its own built-in database
 # instead of using /etc/DIR_COLORS.  Try to use the external file
