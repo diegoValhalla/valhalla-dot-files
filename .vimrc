@@ -49,9 +49,9 @@ endif
                         \ }
 
             " Set term to xterm to display powerline colors
-            "if match($TERM, "screen*") != -1 || match($TERM, "xterm*") != -1
-                "set term=xterm-256color
-            "endif
+            if match($TERM, "screen*") != -1 || match($TERM, "xterm*") != -1
+                set term=screen-256color
+            endif
         "}
 
 
