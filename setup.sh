@@ -33,7 +33,7 @@ ln .gitconfig $HOME
 
 echo -e '\n\n======================================'
 echo -e '## Download and Installing Vim plugins\n'
-vim +NeoBundleInstall +q
+vim +NeoBundleInstall +qall
 
 # install DejaVu Sans Mono font for Powerline
 echo -e '\n\n==========================='
