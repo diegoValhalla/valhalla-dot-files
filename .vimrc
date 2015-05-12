@@ -7,7 +7,6 @@
 
 " Vim5 and later versions support syntax highlighting. Uncommenting the next
 " line enables syntax highlighting by default.
-"syntax on
 if has("syntax")
     syntax on
 endif
@@ -25,14 +24,14 @@ endif
     "Run VIM scripts from isolated directories by adding them to VIM's
     if has('vim_starting')
         if &compatible
-        set nocompatible               " Be iMproved
-    endif
+            set nocompatible "Be iMproved
+        endif
 
-        " Required:
+    "Required:
         set runtimepath+=~/.vim/bundle/neobundle.vim/
     endif
 
-    " Required:
+    "Required:
     call neobundle#begin(expand('~/.vim/bundle/'))
 
     " Let NeoBundle manage NeoBundle
@@ -119,7 +118,6 @@ endif
 
             let g:ycm_min_num_identifier_candidate_chars = 4
             let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/plugins/programming/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py'
-            let g:ycm_filetype_specific_completion_to_disable = {'javascript': 1}
 
             " disable preview popup during completion
             set completeopt-=preview
