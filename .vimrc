@@ -129,15 +129,6 @@ endif
         "}
 
 
-        "MatchTagAlways {
-            "highlight open and close tags
-            NeoBundle 'Valloric/MatchTagAlways', {
-                        \ 'base' : '~/.vim/bundle/plugins/programming/',
-                        \ 'directory' : 'MatchTagAlways/'
-                        \ }
-        "}
-
-
         "vim-javascript-syntax {
             "enhanced javascript syntax
             NeoBundleLazy 'jelera/vim-javascript-syntax', {
