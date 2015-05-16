@@ -6,6 +6,12 @@ sudo apt-get install vim tmux git exuberant-ctags\
                      build-essential cmake python-dev cowsay fortune\
                      npm nodejs-legacy
 
+# for javascript:
+#   - jshint: to Syntastic vim plugin check javascript syntax
+#   - jsctags: to TagBar vim plugin works properly with javascript
+sudo npm -g install jshint
+sudo npm -g install git://github.com/ramitos/jsctags.git
+
 echo -e '\n\n================================'
 echo -e '## Downloading NeoBundle for Vim\n'
 git submodule update --init

@@ -102,10 +102,13 @@ endif
 
         "Syntastic {
             "It's a syntax C-error checker that display it when the file is saved.
-            NeoBundle 'scrooloose/syntastic', {
+            NeoBundleLazy 'scrooloose/syntastic', {
                         \ 'base' : '~/.vim/bundle/plugins/programming/',
-                        \ 'directory' : 'syntastic/'
+                        \ 'directory' : 'syntastic/',
+                        \ 'autoload': {'filetypes': ['javascript']}
                         \ }
+            let g:syntastic_javascript_checkers = ['jshint']
+            let g:syntastic_javascript_jshint_args = "--config ~/.vim/syntax/javascript.jshintrc"
         "}
 
 
