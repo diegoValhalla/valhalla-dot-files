@@ -169,6 +169,26 @@ endif
             autocmd FileType javascript setlocal omnifunc=tern#Complete
         "}
 
+
+        "vim-node {
+            "Tools and environment to make Vim superb for developing with
+            "Node.js
+            "Use 'gf' inside require("...") to jump to source and module files.
+            NeoBundleLazy 'moll/vim-node', {
+                            \ 'base' : '~/.vim/bundle/plugins/programming/',
+                            \ 'directory' : 'vim-node/',
+                            \ 'autoload': {'filetypes': ['javascript']}
+                            \ }
+
+            "<C-w>f to open the file under the cursor in a new vertical split
+            autocmd User Node
+                \ if &filetype == "javascript" |
+                \   nmap <buffer> <C-w>f <Plug>NodeVSplitGotoFile |
+                \   nmap <buffer> <C-w><C-f> <Plug>NodeVSplitGotoFile |
+                \ endif
+        "}
+
+
         "Ctags {
             "To run ctags in background
             nmap <C-l> :call system('ctags --tag-relative --recurse --sort=yes --fields=+l --exclude=".git" . &')<CR><CR>
