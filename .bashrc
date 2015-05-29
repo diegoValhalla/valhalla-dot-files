@@ -100,4 +100,4 @@ cowsay -f $(ls /usr/share/cowsay/cows/ | shuf -n1) $(fortune)
 
 
 # set 'ls' command colors
-eval `dircolors -b .dir_colors/DIR_COLORS`
+eval `dircolors -b ~/.dir_colors/DIR_COLORS`
