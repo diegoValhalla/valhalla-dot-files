@@ -19,7 +19,7 @@ git submodule foreach 'git checkout master'
 
 echo -e '\n\n================'
 echo -e '## Linking files\n'
-for file in `ls -A -I README.md -I setup.sh -I .git -I .gitconfig -I .gitmodules -I .fonts/`;
+for file in `ls -A -I README.md -I setup.sh -I .git -I .gitmodules -I .fonts/`;
 do
     echo -n $PWD/$file
 
@@ -30,12 +30,8 @@ do
         echo " .......linking"
     fi
 
-    ln -sb --suffix='-backup' $PWD/$file $HOME
+    ln -sb --suffix='.bak' $PWD/$file $HOME
 done
-
-# TODO find a better way to link .gitconfig to $HOME
-echo ".gitconfig.......hard linking"
-ln .gitconfig $HOME
 
 echo -e '\n\n======================================'
 echo -e '## Download and Installing Vim plugins\n'
