@@ -120,7 +120,7 @@ endif
                         \ }
 
             let g:ycm_min_num_identifier_candidate_chars = 4
-            let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/plugins/programming/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py'
+            let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/plugins/programming/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
 
             " disable preview popup during completion
             set completeopt-=preview
