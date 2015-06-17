@@ -80,7 +80,6 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
-
 # if the command-not-found package is installed, use it
 if [ -x /usr/lib/command-not-found ]; then
     function command_not_found_handle {
@@ -94,10 +93,5 @@ if [ -x /usr/lib/command-not-found ]; then
     }
 fi
 
-
 # to show fortune cookies
 cowsay -f $(ls /usr/share/cowsay/cows/ | shuf -n1) $(fortune)
-
-
-# set 'ls' command colors
-eval `dircolors -b ~/.dir_colors/DIR_COLORS`
