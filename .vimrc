@@ -310,9 +310,10 @@ endif
     vnoremap <C-c> "+y          " Make Ctrl+c copy to clipboard in visual mode
     nnoremap <C-v> "+P          " Make Ctrl+v paste from clipboard in visual mode
     nnoremap <Space> :noh<CR>   " To disable highlight search temporarily
-    vnoremap <Tab> >gv          " Do the tab and keep highlighted the selected text
-    vnoremap <S-Tab> <gv
+    vnoremap <Tab> >gv          " Do one tab and keep highlighted the selected text
+    vnoremap <S-Tab> <gv        " Remove one tab
     nnoremap <Tab> <C-w>w       " Switch between splits and vertical splits in normal mode
+    vnoremap // y/<C-R>"<CR>    " Search for visually selected text
 
     " To automaticly show which tag must be closed
     imap <C-Space> <C-X><C-O>
