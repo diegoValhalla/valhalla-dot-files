@@ -192,6 +192,26 @@ endif
         "}
 
 
+        "ctrlp {
+            "Path, file, buffer, MRU finder
+            NeoBundle 'kien/ctrlp.vim', {
+                            \ 'base' : '~/.vim/bundle/plugins/general/',
+                            \ 'directory' : 'ctrlp/'
+                            \ }
+
+            "<c-j> and <c-k> to navigate the result list
+            "<c-t>, <c-v>, <c-x> to open the selected entry in a new tab or in
+            "a new split
+            let g:ctrlp_map = '<c-p>'
+            let g:ctrlp_cmd = 'CtrlP'
+            let g:ctrlp_working_path_mode = 'ra'
+            set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
+            set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
+
+            " custom file listing command
+            let g:ctrlp_user_command = 'find %s -type f'        " MacOSX/Linux
+        "}
+
         "Ctags {
             "To run ctags in background
             nmap <C-l> :call system('ctags --tag-relative --recurse --sort=yes --fields=+l --exclude=".git" . &')<CR><CR>
