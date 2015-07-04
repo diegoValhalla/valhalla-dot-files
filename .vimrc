@@ -209,10 +209,7 @@ endif
             set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
         "}
 
-            NeoBundle 'StanAngeloff/php.vim', {
-                        \ 'base' : '~/.vim/bundle/plugins/programming/',
-                        \ 'directory' : 'php.vim/'
-                        \ }
+
         "Ctags {
             "To run ctags in background
             nmap <C-l> :call system('ctags --tag-relative --recurse --sort=yes --fields=+l --exclude=".git" . &')<CR><CR>
