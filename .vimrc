@@ -333,6 +333,7 @@ endif
     vnoremap <S-Tab> <gv        " Remove one tab
     nnoremap <Tab> <C-w>w       " Switch between splits and vertical splits in normal mode
     vnoremap // y/<C-R>"<CR>    " Search for visually selected text
+    vnoremap <c-w>; :!column -t<cr> " Using shell command 'column' to separate columns
 
     " To automaticly show which tag must be closed
     imap <C-Space> <C-X><C-O>
