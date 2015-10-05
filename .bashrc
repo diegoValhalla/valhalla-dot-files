@@ -95,3 +95,6 @@ fi
 
 # to show fortune cookies
 cowsay -f $(ls /usr/share/cowsay/cows/ | shuf -n1) $(fortune)
+
+# to show date and time in bash history
+export HISTTIMEFORMAT="%d/%m/%y %T "
