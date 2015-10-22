@@ -96,6 +96,8 @@ endif
             "search starts in the directory of the current file and goes to its
             "parent
             set tags=./tags
+            " sort tags according to their order in the source file
+            let g:tagbar_sort = 0
             nmap <F8> :TagbarToggle<CR>
         "}
 
