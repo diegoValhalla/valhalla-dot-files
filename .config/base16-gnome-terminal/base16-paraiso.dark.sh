@@ -135,6 +135,16 @@ gset string palette "Tango"
 gset string background_color "#2C001E"
 gset string foreground_color "#ffffff"
 
+# set profile font and custom settings
+gset string font "Hack Regular 10"
+gset bool use_system_font "false"
+gset bool default_show_menubar "false"
+gset int default_size_rows 28
+gset int default_size_columns 88
+
+# set this profile as default
+gconftool --set /apps/gnome-terminal/global/default_profile --type string "$PROFILE_SLUG"
+
 unset PROFILE_NAME
 unset PROFILE_SLUG
 unset DCONF
