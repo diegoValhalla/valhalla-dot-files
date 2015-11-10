@@ -40,9 +40,9 @@ echo -e '\n\n======================================'
 echo -e '## Download and Installing Vim plugins\n'
 vim +NeoBundleInstall +qall
 
-# install DejaVu Sans Mono font for Powerline
+# install Hack Regular font with size 10 for Powerline
 echo -e '\n\n==========================='
-echo -e '## Installing DejaVu Sans Mono font for Powerline\n'
+echo -e '## Installing Hack Regular font for Powerline\n'
 if [ -d $HOME/.fonts/ ]; then
     cp -pr .fonts/* $HOME/.fonts/
 else
