@@ -144,6 +144,17 @@ endif
         "}
 
 
+        "vim-javascript-syntax {
+            "improve vim json highlight
+            NeoBundleLazy 'elzr/vim-json', {
+                            \ 'base' : '~/.vim/bundle/plugins/programming/',
+                            \ 'directory' : 'vim-json/',
+                            \ 'autoload': {'filetypes': ['javascript']}
+                            \ }
+            "to enable json quotes
+            let g:vim_json_syntax_conceal = 0
+        "}
+
         "tern_for_vim {
             "better support within editor for javascript
             "a '.tern-project' should always be created in order to use it in a
