@@ -139,8 +139,9 @@ gset string foreground_color "#ffffff"
 gset string font "Hack Regular 10"
 gset bool use_system_font "false"
 gset bool default_show_menubar "false"
+gset bool use_custom_default_size "true"
 gset int default_size_rows 28
-gset int default_size_columns 88
+gset int default_size_columns 92
 
 # set this profile as default
 gconftool --set /apps/gnome-terminal/global/default_profile --type string "$PROFILE_SLUG"

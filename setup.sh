@@ -42,7 +42,7 @@ vim +NeoBundleInstall +qall
 
 # install Hack Regular font with size 10 for Powerline
 echo -e '\n\n==========================='
-echo -e '## Installing Hack Regular font for Powerline\n'
+echo -e '## Installing Hack Regular font with size 10 for Powerline\n'
 if [ -d $HOME/.fonts/ ]; then
     cp -pr .fonts/* $HOME/.fonts/
 else
