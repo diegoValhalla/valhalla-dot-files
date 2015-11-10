@@ -334,3 +334,6 @@ endif
 
     " To automaticly show which tag must be closed
     imap <C-Space> <C-X><C-O>
+
+    " format json
+    nmap =j :%!python -m json.tool<CR>
