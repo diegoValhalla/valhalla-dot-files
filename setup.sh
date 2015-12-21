@@ -44,9 +44,9 @@ vim +NeoBundleInstall +qall
 echo -e '\n\n==========================='
 echo -e '## Installing Hack Regular font with size 10 for Powerline\n'
 if [ -d $HOME/.fonts/ ]; then
-    cp -pr .fonts/* $HOME/.fonts/
+    ln -s $PWD/.fonts/* $HOME/.fonts/
 else
-    ln -sb --suffix='-backup' $PWD/.fonts/ $HOME/.fonts/
+    ln -s $PWD/.fonts/ $HOME
 fi
 cd $HOME/.fonts/
 fc-cache -fv
@@ -61,7 +61,8 @@ cd $HOME/.vim/bundle/plugins/programming/YouCompleteMe/
 echo -e '\n\n==========================='
 echo -e '## Set GNOME terminal profile based on:'
 echo -e 'git@github.com:chriskempson/base16-gnome-terminal.git\n'
-ln -s $DOT_FILES_DIR/.config/base16-gnome-terminal/ $HOME/.config/
+ln -sf $DOT_FILES_DIR/.config/base16-gnome-terminal/ $HOME/.config/
 source $HOME/.config/base16-gnome-terminal/base16-paraiso.dark.sh
 
 source ~/.bashrc
+echo -e '**Open a new terminal**'
