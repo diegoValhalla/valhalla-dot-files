@@ -337,3 +337,11 @@ endif
 
     " format json
     nmap =j :%!python -m json.tool<CR>
+
+    " set indentation level for some file types
+    autocmd Filetype vim        setlocal ts=2 sts=2 sw=2
+    autocmd Filetype html       setlocal ts=2 sts=2 sw=2
+    autocmd Filetype css        setlocal ts=2 sts=2 sw=2
+    autocmd Filetype json       setlocal ts=2 sts=2 sw=2
+    autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
+    autocmd Filetype markdown   setlocal ts=2 sts=2 sw=2
