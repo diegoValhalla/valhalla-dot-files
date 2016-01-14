@@ -93,6 +93,12 @@ if [ -x /usr/lib/command-not-found ]; then
     }
 fi
 
+genpasswd() {
+    local LENGTH=${1}
+    [ -z "${LENGTH}" ] && LENGTH=12
+    tr -cd '[:alnum:]' < /dev/urandom | head -n1 -c${LENGTH} | xargs
+}
+
 # to show fortune cookies
 cowsay -f $(ls /usr/share/cowsay/cows/ | shuf -n1) $(fortune)
 
