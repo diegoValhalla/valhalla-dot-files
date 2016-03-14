@@ -207,6 +207,15 @@ endif
         "}
 
 
+        "editorconfig-vim {
+            "read and set code style from .editorconfig file
+            NeoBundle 'editorconfig/editorconfig-vim', {
+                        \ 'base' : '~/.vim/bundle/plugins/general/',
+                        \ 'directory' : 'editorconfig-vim/'
+                        \ }
+        "}
+
+
         "Ctags {
             "To run ctags in background
             nmap <C-l> :call system('ctags --tag-relative --recurse --sort=yes --fields=+l --exclude=".git" . &')<CR><CR>
