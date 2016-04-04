@@ -216,6 +216,15 @@ endif
         "}
 
 
+        "auto-pairs {
+            "Insert or delete brackets, parens, quotes in pair
+            NeoBundle 'jiangmiao/auto-pairs', {
+                        \ 'base' : '~/.vim/bundle/plugins/general/',
+                        \ 'directory' : 'auto-pairs/'
+                        \ }
+        "}
+
+
         "Ctags {
             "To run ctags in background
             nmap <C-l> :call system('ctags --tag-relative --recurse --sort=yes --fields=+l --exclude=".git" . &')<CR><CR>
