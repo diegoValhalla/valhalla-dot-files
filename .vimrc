@@ -143,7 +143,7 @@ endif
         "}
 
 
-        "vim-javascript-syntax {
+        "vim-json {
             "improve vim json highlight
             NeoBundleLazy 'elzr/vim-json', {
                             \ 'base' : '~/.vim/bundle/plugins/programming/',
