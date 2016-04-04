@@ -150,9 +150,10 @@ endif
                             \ 'directory' : 'vim-json/',
                             \ 'autoload': {'filetypes': ['javascript']}
                             \ }
-            "to enable json quotes
             let g:vim_json_syntax_conceal = 0
+            let g:vim_json_warnings = 0
         "}
+
 
         "tern_for_vim {
             "better support within editor for javascript
