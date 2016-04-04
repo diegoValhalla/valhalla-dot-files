@@ -162,7 +162,7 @@ endif
             NeoBundleLazy 'marijnh/tern_for_vim', {
                         \ 'base' : '~/.vim/bundle/plugins/programming/',
                         \ 'directory' : 'tern_for_vim/',
-                        \ 'autoload': {'filetypes': ['javascript']},
+                        \ 'autoload': {'filetypes': ['javascript', 'json']},
                         \ 'build' : {'unix': 'npm install'}
                         \ }
             "to use Tern with YouCompleteMe
@@ -172,8 +172,8 @@ endif
 
         "vim-node {
             "Tools and environment to make Vim superb for developing with
-            "Node.js
-            "Use 'gf' inside require("...") to jump to source and module files.
+            "Node.js. Use 'gf' inside require("...") to jump to source and
+            "module files.
             NeoBundleLazy 'moll/vim-node', {
                             \ 'base' : '~/.vim/bundle/plugins/programming/',
                             \ 'directory' : 'vim-node/',
@@ -354,3 +354,4 @@ endif
     autocmd Filetype json       setlocal ts=2 sts=2 sw=2
     autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
     autocmd Filetype markdown   setlocal ts=2 sts=2 sw=2
+
