@@ -107,10 +107,9 @@ endif
             NeoBundleLazy 'scrooloose/syntastic', {
                         \ 'base' : '~/.vim/bundle/plugins/programming/',
                         \ 'directory' : 'syntastic/',
-                        \ 'autoload': {'filetypes': ['javascript']}
+                        \ 'autoload': {'filetypes': ['javascript', 'json']}
                         \ }
-            let g:syntastic_javascript_checkers = ['jshint']
-            let g:syntastic_javascript_jshint_args = "--config ~/.vim/syntax/javascript.jshintrc"
+            let g:syntastic_javascript_checkers = ['eslint']
         "}
 
 
