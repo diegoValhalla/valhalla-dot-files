@@ -6,7 +6,7 @@ echo '================================'
 echo -e '## Installing necessary packages\n'
 sudo apt-get install vim tmux git exuberant-ctags\
                      build-essential cmake python-dev cowsay fortune\
-                     npm nodejs-legacy
+                     npm nodejs-legacy xclip
 
 # for javascript:
 #   - jshint: to Syntastic vim plugin check javascript syntax
