@@ -95,8 +95,10 @@ fi
 
 genpasswd() {
     local LENGTH=${1}
+    local CHARS_SET=${2}
     [ -z "${LENGTH}" ] && LENGTH=12
-    tr -cd '[:alnum:]' < /dev/urandom | head -n1 -c${LENGTH} | xargs
+    [ -z "${CHARS_SET}" ] && CHARS_SET="print"
+    tr -cd "[:${CHARS_SET}:]" < /dev/urandom | head -n1 -c${LENGTH} | xargs -0
 }
 
 # to show fortune cookies
