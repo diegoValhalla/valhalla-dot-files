@@ -101,6 +101,17 @@ genpasswd() {
     tr -cd "[:${CHARS_SET}:]" < /dev/urandom | head -n1 -c${LENGTH} | xargs -0
 }
 
+to64() {
+    local USER=${1}
+    local PASSWORD=${2}
+    printf "${USER}:${PASSWORD}" | base64
+}
+
+decode64() {
+    local BASE64_STR=${1}
+    printf "${BASE64_STR}" | base64 -d && echo
+}
+
 # to show fortune cookies
 cowsay -f $(ls /usr/share/cowsay/cows/ | shuf -n1) $(fortune)
 
