@@ -44,6 +44,7 @@ if which "$DCONF" > /dev/null 2>&1; then
 
         if [[ -n "`$DCONF read $BASE_KEY_NEW/default`" ]]; then
             DEFAULT_SLUG=`$DCONF read $BASE_KEY_NEW/default | tr -d \'`
+            #DEFAULT_SLUG=`gsettings get org.gnome.Terminal.ProfilesList default`
         else
             DEFAULT_SLUG=`$DCONF list $BASE_KEY_NEW/ | grep '^:' | head -n1 | tr -d :/`
         fi
@@ -72,15 +73,24 @@ if which "$DCONF" > /dev/null 2>&1; then
         # default palette bright colors
         dset palette "'Tango'"
         # ubuntu background's color #2C001E. But, this is a bit brighter
-        dset background-color "'#411934'"
+        #dset background-color "'#411934'"
+        dset background-color "'#2C001E'"
         dset foreground-color "'#ffffff'"
 
+        # set profile font and custom settings
+        dset font "'Hack Regular 10'"
+        dset use-transparent-background "false"
+        dset use-system-font "false"
+        dset default-show-menubar "false"
+        dset use-custom-default-size "true"
+        dset default-size-rows 28
+        dset default-size-columns 88
 
         unset PROFILE_NAME
         unset PROFILE_SLUG
         unset DCONF
         unset UUIDGEN
-        exit 0
+        return 0
     fi
 fi
 
