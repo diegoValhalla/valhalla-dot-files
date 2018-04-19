@@ -325,7 +325,7 @@ endif
     autocmd BufEnter * silent! lcd %:p:h
 
     " setting text width for git commits
-    au FileType gitcommit set tw=49
+    au FileType gitcommit set tw=59
 
     set pumheight=8 "limit to 8 lines to show in the pop-up
 
