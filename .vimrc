@@ -324,9 +324,6 @@ endif
     " Set the working directory the same as the file that is being edited.
     autocmd BufEnter * silent! lcd %:p:h
 
-    " setting text width for git commits
-    au FileType gitcommit set tw=59
-
     set pumheight=8 "limit to 8 lines to show in the pop-up
 
     " Vim 7.4.1-52 backspace is not working properly
@@ -357,11 +354,13 @@ endif
     nmap =j :%!python -m json.tool<CR>
 
     " set indentation level for some file types
+    autocmd FileType text       setlocal tw=0
+    autocmd FileType gitcommit  setlocal ts=2 sts=2 sw=2 tw=72 spell
     autocmd Filetype vim        setlocal ts=2 sts=2 sw=2
     autocmd Filetype html       setlocal ts=2 sts=2 sw=2
     autocmd Filetype css        setlocal ts=2 sts=2 sw=2
     autocmd Filetype json       setlocal ts=2 sts=2 sw=2
     autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
-    autocmd Filetype markdown   setlocal ts=2 sts=2 sw=2
+    autocmd Filetype markdown   setlocal ts=2 sts=2 sw=2 tw=0
     autocmd Filetype ruby       setlocal ts=2 sts=2 sw=2
 
