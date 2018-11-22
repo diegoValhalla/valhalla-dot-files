@@ -74,7 +74,8 @@ if which "$DCONF" > /dev/null 2>&1; then
         dset palette "'Tango'"
         # ubuntu background's color #2C001E. But, this is a bit brighter
         #dset background-color "'#411934'"
-        dset background-color "'#2C001E'"
+        dset background-color "'#3C0029'"
+        dset string background_color "#5a003d"
         dset foreground-color "'#ffffff'"
 
         # set profile font and custom settings
@@ -142,7 +143,7 @@ gset bool   use_theme_background "false"
 gset string palette "Tango"
 # ubuntu background's color #2C001E. But, this is a bit brighter
 #gset string background_color "#411934"
-gset string background_color "#2C001E"
+gset string background_color "#3C0029"
 gset string foreground_color "#ffffff"
 
 # set profile font and custom settings
