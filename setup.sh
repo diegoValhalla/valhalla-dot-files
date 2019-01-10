@@ -55,7 +55,7 @@ fc-cache -fv
 echo -e '\n\n==========================='
 echo -e '## Installing YouCompleteMe\n'
 cd $HOME/.vim/bundle/plugins/programming/YouCompleteMe/
-./install.sh --clang-completer
+python ./install.py
 
 # set gnome terminal profile which is based on Ubuntu's Terminal color
 echo -e '\n\n==========================='
