@@ -155,21 +155,6 @@ endif
         "}
 
 
-        "tern_for_vim {
-            "better support within editor for javascript
-            "a '.tern-project' should always be created in order to use it in a
-            "js project as in Tern's documentation.
-            NeoBundleLazy 'marijnh/tern_for_vim', {
-                        \ 'base' : '~/.vim/bundle/plugins/programming/',
-                        \ 'directory' : 'tern_for_vim/',
-                        \ 'autoload': {'filetypes': ['javascript', 'json']},
-                        \ 'build' : {'unix': 'npm install'}
-                        \ }
-            "to use Tern with YouCompleteMe
-            autocmd FileType javascript setlocal omnifunc=tern#Complete
-        "}
-
-
         "vim-node {
             "Tools and environment to make Vim superb for developing with
             "Node.js. Use 'gf' inside require("...") to jump to source and
